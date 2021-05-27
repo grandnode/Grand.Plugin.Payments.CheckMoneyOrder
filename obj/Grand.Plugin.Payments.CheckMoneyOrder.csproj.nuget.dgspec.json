@@ -1,25 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Plugins\\Grand.Plugin.Payments.CheckMoneyOrder\\Grand.Plugin.Payments.CheckMoneyOrder.csproj": {}
+    "D:\\GITHUB\\GrandNode\\4.90\\Plugins\\Grand.Plugin.Payments.CheckMoneyOrder\\Grand.Plugin.Payments.CheckMoneyOrder.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Core\\Grand.Core.csproj": {
+    "D:\\GITHUB\\GrandNode\\4.90\\Grand.Core\\Grand.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Core\\Grand.Core.csproj",
+        "projectUniqueName": "D:\\GITHUB\\GrandNode\\4.90\\Grand.Core\\Grand.Core.csproj",
         "projectName": "Grand.Core",
-        "projectPath": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Core\\Grand.Core.csproj",
-        "packagesPath": "C:\\Users\\ppora\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Core\\obj\\",
+        "projectPath": "D:\\GITHUB\\GrandNode\\4.90\\Grand.Core\\Grand.Core.csproj",
+        "packagesPath": "C:\\Users\\twozn\\.nuget\\packages\\",
+        "outputPath": "D:\\GITHUB\\GrandNode\\4.90\\Grand.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\NuGet.Config",
-          "C:\\Users\\ppora\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "D:\\GITHUB\\GrandNode\\4.90\\NuGet.Config",
+          "C:\\Users\\twozn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -30,9 +31,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Domain\\Grand.Domain.csproj": {
-                "projectPath": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Domain\\Grand.Domain.csproj"
+              "D:\\GITHUB\\GrandNode\\4.90\\Grand.Domain\\Grand.Domain.csproj": {
+                "projectPath": "D:\\GITHUB\\GrandNode\\4.90\\Grand.Domain\\Grand.Domain.csproj"
               }
             }
           }
@@ -45,66 +47,59 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
-              "version": "[10.0.0, )"
+              "version": "[10.1.1, )"
             },
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[8.0.1, )"
-            },
-            "Autofac": {
-              "target": "Package",
-              "version": "[5.2.0, )"
-            },
-            "Autofac.Extensions.DependencyInjection": {
-              "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[8.1.0, )"
             },
             "FluentValidation": {
               "target": "Package",
-              "version": "[9.2.0, )"
+              "version": "[9.3.0, )"
             },
             "FluentValidation.AspNetCore": {
               "target": "Package",
-              "version": "[9.2.0, )"
+              "version": "[9.3.0, )"
             },
             "GoogleAuthenticator": {
               "target": "Package",
-              "version": "[2.0.1, )"
+              "version": "[2.1.1, )"
             },
             "MediatR": {
               "target": "Package",
-              "version": "[8.1.0, )"
+              "version": "[9.0.0, )"
             },
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[8.1.0, )"
+              "version": "[9.0.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[3.1.8, )"
+              "version": "[3.1.10, )"
             },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
-              "version": "[3.1.8, )"
+              "version": "[3.1.10, )"
             },
             "Microsoft.CodeAnalysis.CSharp": {
               "target": "Package",
-              "version": "[3.7.0, )"
+              "version": "[3.8.0, )"
             },
             "Microsoft.CodeAnalysis.CSharp.Scripting": {
               "target": "Package",
-              "version": "[3.7.0, )"
+              "version": "[3.8.0, )"
             },
             "Microsoft.Extensions.Caching.Memory": {
               "target": "Package",
-              "version": "[3.1.8, )"
+              "version": "[3.1.10, )"
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
-              "version": "[3.1.8, )"
+              "version": "[3.1.10, )"
             },
             "Microsoft.Extensions.DependencyModel": {
               "target": "Package",
@@ -116,7 +111,7 @@
             },
             "StackExchange.Redis": {
               "target": "Package",
-              "version": "[2.1.58, )"
+              "version": "[2.2.4, )"
             }
           },
           "imports": [
@@ -130,33 +125,31 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Domain\\Grand.Domain.csproj": {
+    "D:\\GITHUB\\GrandNode\\4.90\\Grand.Domain\\Grand.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Domain\\Grand.Domain.csproj",
+        "projectUniqueName": "D:\\GITHUB\\GrandNode\\4.90\\Grand.Domain\\Grand.Domain.csproj",
         "projectName": "Grand.Domain",
-        "projectPath": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Domain\\Grand.Domain.csproj",
-        "packagesPath": "C:\\Users\\ppora\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Domain\\obj\\",
+        "projectPath": "D:\\GITHUB\\GrandNode\\4.90\\Grand.Domain\\Grand.Domain.csproj",
+        "packagesPath": "C:\\Users\\twozn\\.nuget\\packages\\",
+        "outputPath": "D:\\GITHUB\\GrandNode\\4.90\\Grand.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\NuGet.Config",
-          "C:\\Users\\ppora\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "D:\\GITHUB\\GrandNode\\4.90\\NuGet.Config",
+          "C:\\Users\\twozn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -167,6 +160,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -178,26 +172,27 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "DotLiquid": {
               "target": "Package",
-              "version": "[2.0.361, )"
+              "version": "[2.0.366, )"
             },
             "MongoDB.Bson": {
               "target": "Package",
-              "version": "[2.11.2, )"
+              "version": "[2.11.5, )"
             },
             "MongoDB.Driver": {
               "target": "Package",
-              "version": "[2.11.2, )"
+              "version": "[2.11.5, )"
             },
             "MongoDB.Driver.Core": {
               "target": "Package",
-              "version": "[2.11.2, )"
+              "version": "[2.11.5, )"
             },
             "MongoDB.Driver.GridFS": {
               "target": "Package",
-              "version": "[2.11.2, )"
+              "version": "[2.11.5, )"
             }
           },
           "imports": [
@@ -215,26 +210,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Framework\\Grand.Framework.csproj": {
+    "D:\\GITHUB\\GrandNode\\4.90\\Grand.Framework\\Grand.Framework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Framework\\Grand.Framework.csproj",
+        "projectUniqueName": "D:\\GITHUB\\GrandNode\\4.90\\Grand.Framework\\Grand.Framework.csproj",
         "projectName": "Grand.Framework",
-        "projectPath": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Framework\\Grand.Framework.csproj",
-        "packagesPath": "C:\\Users\\ppora\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Framework\\obj\\",
+        "projectPath": "D:\\GITHUB\\GrandNode\\4.90\\Grand.Framework\\Grand.Framework.csproj",
+        "packagesPath": "C:\\Users\\twozn\\.nuget\\packages\\",
+        "outputPath": "D:\\GITHUB\\GrandNode\\4.90\\Grand.Framework\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\NuGet.Config",
-          "C:\\Users\\ppora\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "D:\\GITHUB\\GrandNode\\4.90\\NuGet.Config",
+          "C:\\Users\\twozn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -245,12 +241,13 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Core\\Grand.Core.csproj": {
-                "projectPath": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Core\\Grand.Core.csproj"
+              "D:\\GITHUB\\GrandNode\\4.90\\Grand.Core\\Grand.Core.csproj": {
+                "projectPath": "D:\\GITHUB\\GrandNode\\4.90\\Grand.Core\\Grand.Core.csproj"
               },
-              "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Services\\Grand.Services.csproj": {
-                "projectPath": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Services\\Grand.Services.csproj"
+              "D:\\GITHUB\\GrandNode\\4.90\\Grand.Services\\Grand.Services.csproj": {
+                "projectPath": "D:\\GITHUB\\GrandNode\\4.90\\Grand.Services\\Grand.Services.csproj"
               }
             }
           }
@@ -263,10 +260,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "AspNetCore.HealthChecks.MongoDb": {
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[5.0.1, )"
             },
             "BundlerMinifier.Core": {
               "target": "Package",
@@ -274,31 +272,27 @@
             },
             "Microsoft.AspNetCore.DataProtection.StackExchangeRedis": {
               "target": "Package",
-              "version": "[3.1.8, )"
+              "version": "[5.0.0, )"
             },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
-              "version": "[3.1.8, )"
+              "version": "[3.1.10, )"
             },
             "MiniProfiler.AspNetCore.Mvc": {
               "target": "Package",
-              "version": "[4.2.1, )"
+              "version": "[4.2.22, )"
             },
             "NetEscapades.AspNetCore.SecurityHeaders": {
               "target": "Package",
-              "version": "[0.11.2, )"
+              "version": "[0.12.1, )"
             },
             "System.IO.FileSystem.AccessControl": {
               "target": "Package",
-              "version": "[4.7.0, )"
+              "version": "[5.0.0, )"
             },
-            "Wangkanai.Detection.Crawler": {
+            "Wangkanai.Detection": {
               "target": "Package",
-              "version": "[2.0.0, )"
-            },
-            "Wangkanai.Detection.Device": {
-              "target": "Package",
-              "version": "[2.0.0, )"
+              "version": "[3.0.0, )"
             },
             "WebEssentials.AspNetCore.PWA": {
               "target": "Package",
@@ -306,11 +300,11 @@
             },
             "WebMarkupMin.AspNetCore3": {
               "target": "Package",
-              "version": "[2.8.9, )"
+              "version": "[2.9.1, )"
             },
             "WebMarkupMin.Core": {
               "target": "Package",
-              "version": "[2.8.6, )"
+              "version": "[2.9.0, )"
             }
           },
           "imports": [
@@ -324,33 +318,31 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Services\\Grand.Services.csproj": {
+    "D:\\GITHUB\\GrandNode\\4.90\\Grand.Services\\Grand.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Services\\Grand.Services.csproj",
+        "projectUniqueName": "D:\\GITHUB\\GrandNode\\4.90\\Grand.Services\\Grand.Services.csproj",
         "projectName": "Grand.Services",
-        "projectPath": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Services\\Grand.Services.csproj",
-        "packagesPath": "C:\\Users\\ppora\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Services\\obj\\",
+        "projectPath": "D:\\GITHUB\\GrandNode\\4.90\\Grand.Services\\Grand.Services.csproj",
+        "packagesPath": "C:\\Users\\twozn\\.nuget\\packages\\",
+        "outputPath": "D:\\GITHUB\\GrandNode\\4.90\\Grand.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\NuGet.Config",
-          "C:\\Users\\ppora\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "D:\\GITHUB\\GrandNode\\4.90\\NuGet.Config",
+          "C:\\Users\\twozn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -361,9 +353,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Core\\Grand.Core.csproj": {
-                "projectPath": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Core\\Grand.Core.csproj"
+              "D:\\GITHUB\\GrandNode\\4.90\\Grand.Core\\Grand.Core.csproj": {
+                "projectPath": "D:\\GITHUB\\GrandNode\\4.90\\Grand.Core\\Grand.Core.csproj"
               }
             }
           }
@@ -376,18 +369,19 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "AWSSDK.Core": {
               "target": "Package",
-              "version": "[3.5.1.10, )"
+              "version": "[3.5.1.57, )"
             },
             "AWSSDK.S3": {
               "target": "Package",
-              "version": "[3.5.1.1, )"
+              "version": "[3.5.7.4, )"
             },
-            "DotNetCore.NPOI": {
+            "Azure.Storage.Blobs": {
               "target": "Package",
-              "version": "[1.2.2, )"
+              "version": "[12.7.0, )"
             },
             "Google.Apis": {
               "target": "Package",
@@ -395,23 +389,19 @@
             },
             "Google.Apis.AnalyticsReporting.v4": {
               "target": "Package",
-              "version": "[1.49.0.2074, )"
+              "version": "[1.49.0.2197, )"
             },
             "MailKit": {
               "target": "Package",
-              "version": "[2.9.0, )"
+              "version": "[2.10.1, )"
             },
             "MaxMind.GeoIP2": {
               "target": "Package",
-              "version": "[3.2.0, )"
+              "version": "[4.0.1, )"
             },
-            "Microsoft.Azure.Storage.Blob": {
+            "NPOI": {
               "target": "Package",
-              "version": "[11.2.2, )"
-            },
-            "Microsoft.Azure.Storage.Common": {
-              "target": "Package",
-              "version": "[11.2.2, )"
+              "version": "[2.5.2, )"
             },
             "SkiaSharp": {
               "target": "Package",
@@ -437,33 +427,31 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Plugins\\Grand.Plugin.Payments.CheckMoneyOrder\\Grand.Plugin.Payments.CheckMoneyOrder.csproj": {
+    "D:\\GITHUB\\GrandNode\\4.90\\Plugins\\Grand.Plugin.Payments.CheckMoneyOrder\\Grand.Plugin.Payments.CheckMoneyOrder.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Plugins\\Grand.Plugin.Payments.CheckMoneyOrder\\Grand.Plugin.Payments.CheckMoneyOrder.csproj",
+        "projectUniqueName": "D:\\GITHUB\\GrandNode\\4.90\\Plugins\\Grand.Plugin.Payments.CheckMoneyOrder\\Grand.Plugin.Payments.CheckMoneyOrder.csproj",
         "projectName": "Grand.Plugin.Payments.CheckMoneyOrder",
-        "projectPath": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Plugins\\Grand.Plugin.Payments.CheckMoneyOrder\\Grand.Plugin.Payments.CheckMoneyOrder.csproj",
-        "packagesPath": "C:\\Users\\ppora\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Plugins\\Grand.Plugin.Payments.CheckMoneyOrder\\obj\\",
+        "projectPath": "D:\\GITHUB\\GrandNode\\4.90\\Plugins\\Grand.Plugin.Payments.CheckMoneyOrder\\Grand.Plugin.Payments.CheckMoneyOrder.csproj",
+        "packagesPath": "C:\\Users\\twozn\\.nuget\\packages\\",
+        "outputPath": "D:\\GITHUB\\GrandNode\\4.90\\Plugins\\Grand.Plugin.Payments.CheckMoneyOrder\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\NuGet.Config",
-          "C:\\Users\\ppora\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "D:\\GITHUB\\GrandNode\\4.90\\NuGet.Config",
+          "C:\\Users\\twozn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -474,18 +462,19 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Core\\Grand.Core.csproj": {
-                "projectPath": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Core\\Grand.Core.csproj"
+              "D:\\GITHUB\\GrandNode\\4.90\\Grand.Core\\Grand.Core.csproj": {
+                "projectPath": "D:\\GITHUB\\GrandNode\\4.90\\Grand.Core\\Grand.Core.csproj"
               },
-              "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Domain\\Grand.Domain.csproj": {
-                "projectPath": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Domain\\Grand.Domain.csproj"
+              "D:\\GITHUB\\GrandNode\\4.90\\Grand.Domain\\Grand.Domain.csproj": {
+                "projectPath": "D:\\GITHUB\\GrandNode\\4.90\\Grand.Domain\\Grand.Domain.csproj"
               },
-              "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Framework\\Grand.Framework.csproj": {
-                "projectPath": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Framework\\Grand.Framework.csproj"
+              "D:\\GITHUB\\GrandNode\\4.90\\Grand.Framework\\Grand.Framework.csproj": {
+                "projectPath": "D:\\GITHUB\\GrandNode\\4.90\\Grand.Framework\\Grand.Framework.csproj"
               },
-              "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Services\\Grand.Services.csproj": {
-                "projectPath": "C:\\Users\\ppora\\source\\repos\\grandnode\\grandnode\\Grand.Services\\Grand.Services.csproj"
+              "D:\\GITHUB\\GrandNode\\4.90\\Grand.Services\\Grand.Services.csproj": {
+                "projectPath": "D:\\GITHUB\\GrandNode\\4.90\\Grand.Services\\Grand.Services.csproj"
               }
             }
           }
@@ -498,6 +487,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -509,14 +499,11 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

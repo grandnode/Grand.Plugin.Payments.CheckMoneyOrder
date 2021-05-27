@@ -13,7 +13,7 @@ namespace Grand.Plugin.Payments.CheckMoneyOrder.Models
         }
 
         public string ActiveStoreScopeConfiguration { get; set; }
-
+        
         [GrandResourceDisplayName("Plugins.Payment.CheckMoneyOrder.DescriptionText")]
         public string DescriptionText { get; set; }
         public bool DescriptionText_OverrideForStore { get; set; }
@@ -37,7 +37,7 @@ namespace Grand.Plugin.Payments.CheckMoneyOrder.Models
         public partial class ConfigurationLocalizedModel : ILocalizedModelLocal
         {
             public string LanguageId { get; set; }
-
+            
             [GrandResourceDisplayName("Plugins.Payment.CheckMoneyOrder.DescriptionText")]
             public string DescriptionText { get; set; }
         }

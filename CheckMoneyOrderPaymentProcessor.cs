@@ -11,28 +11,36 @@ using Microsoft.AspNetCore.Routing;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Grand.Framework.Menu;
+using Grand.Services.Security;
+using System.Linq;
 
 namespace Grand.Plugin.Payments.CheckMoneyOrder
 {
     /// <summary>
     /// CheckMoneyOrder payment processor
     /// </summary>
-    public class CheckMoneyOrderPaymentProcessor : BasePlugin, IPaymentMethod
+    public class CheckMoneyOrderPaymentProcessor : BasePlugin, IPaymentMethod, IAdminMenuPlugin
     {
         #region Fields
+
         private readonly CheckMoneyOrderPaymentSettings _checkMoneyOrderPaymentSettings;
         private readonly ISettingService _settingService;
         private readonly IOrderTotalCalculationService _orderTotalCalculationService;
         private readonly ILocalizationService _localizationService;
         private readonly IWebHelper _webHelper;
         private readonly ILanguageService _languageService;
+        private readonly IWorkContext _workContext;
+        private readonly IPermissionService _permissionService;
+
         #endregion
 
         #region Ctor
 
         public CheckMoneyOrderPaymentProcessor(CheckMoneyOrderPaymentSettings checkMoneyOrderPaymentSettings,
             ISettingService settingService, IOrderTotalCalculationService orderTotalCalculationService, 
-            ILocalizationService localizationService, IWebHelper webHelper, ILanguageService languageService)
+            ILocalizationService localizationService, IWebHelper webHelper, ILanguageService languageService,
+            IWorkContext workContext, IPermissionService permissionService)
         {
             _checkMoneyOrderPaymentSettings = checkMoneyOrderPaymentSettings;
             _settingService = settingService;
@@ -40,6 +48,8 @@ namespace Grand.Plugin.Payments.CheckMoneyOrder
             _localizationService = localizationService;
             _webHelper = webHelper;
             _languageService = languageService;
+            _workContext = workContext;
+            _permissionService = permissionService;
         }
 
         #endregion
@@ -225,7 +235,11 @@ namespace Grand.Plugin.Payments.CheckMoneyOrder
             await this.AddOrUpdatePluginLocaleResource(_localizationService, _languageService, "Plugins.Payment.CheckMoneyOrder.ShippableProductRequired", "Shippable product required");
             await this.AddOrUpdatePluginLocaleResource(_localizationService, _languageService, "Plugins.Payment.CheckMoneyOrder.ShippableProductRequired.Hint", "An option indicating whether shippable products are required in order to display this payment method during checkout.");
 
-            
+            await this.AddOrUpdatePluginLocaleResource(_localizationService, _languageService, "GrandNode.Sitemap.Extensions", "Extensions");
+            await this.AddOrUpdatePluginLocaleResource(_localizationService, _languageService, "Plugins.Payment.CheckMoneyOrder", "Check Money Order");
+            await this.AddOrUpdatePluginLocaleResource(_localizationService, _languageService, "Plugins.Payment.CheckMoneyOrder.Support", "Support");
+            await this.AddOrUpdatePluginLocaleResource(_localizationService, _languageService, "Plugins.Payment.CheckMoneyOrder.Settings", "Settings");
+
             await base.Install();
         }
 
@@ -235,17 +249,58 @@ namespace Grand.Plugin.Payments.CheckMoneyOrder
             await _settingService.DeleteSetting<CheckMoneyOrderPaymentSettings>();
 
             //locales
-            await this.DeletePluginLocaleResource(_localizationService, _languageService, "Plugins.Payment.CheckMoneyOrder.DescriptionText");
-            await this.DeletePluginLocaleResource(_localizationService, _languageService, "Plugins.Payment.CheckMoneyOrder.DescriptionText.Hint");
-            await this.DeletePluginLocaleResource(_localizationService, _languageService, "Plugins.Payment.CheckMoneyOrder.PaymentMethodDescription");
-            await this.DeletePluginLocaleResource(_localizationService, _languageService, "Plugins.Payment.CheckMoneyOrder.AdditionalFee");
-            await this.DeletePluginLocaleResource(_localizationService, _languageService, "Plugins.Payment.CheckMoneyOrder.AdditionalFee.Hint");
-            await this.DeletePluginLocaleResource(_localizationService, _languageService, "Plugins.Payment.CheckMoneyOrder.AdditionalFeePercentage");
-            await this.DeletePluginLocaleResource(_localizationService, _languageService, "Plugins.Payment.CheckMoneyOrder.AdditionalFeePercentage.Hint");
-            await this.DeletePluginLocaleResource(_localizationService, _languageService, "Plugins.Payment.CheckMoneyOrder.ShippableProductRequired");
-            await this.DeletePluginLocaleResource(_localizationService, _languageService, "Plugins.Payment.CheckMoneyOrder.ShippableProductRequired.Hint");
-            
+            var en = _localizationService.GetAllResources(_workContext.WorkingLanguage.Id)
+                .Where(r => r.ResourceName.StartsWith(string.Format("Plugins.Payment.CheckMoneyOrder.{0}", PluginDescriptor.SystemName)));
+            foreach (var item in en)
+            {
+                await _localizationService.DeleteLocaleStringResource(item);
+            }
+
             await base.Uninstall();
+        }
+
+        public async Task ManageSiteMap(SiteMapNode rootNode)
+        {
+            if (await _permissionService.Authorize(StandardPermissionProvider.ManagePaymentMethods))
+            {
+                var pluginNode = rootNode.ChildNodes.FirstOrDefault(x => x.SystemName == "extensions");
+                if (pluginNode == null)
+                {
+                    rootNode.ChildNodes.Add(new SiteMapNode() {
+                        SystemName = "extensions",
+                        ResourceName = "GrandNode.Sitemap.Extensions",
+                        Visible = true,
+                        IconClass = "icon-paper-clip"
+                    });
+                    pluginNode = rootNode.ChildNodes.FirstOrDefault(x => x.SystemName == "extensions");
+                }
+
+                SiteMapNode Menu = new SiteMapNode();
+                Menu.ResourceName = "Plugins.Payment.CheckMoneyOrder";
+                Menu.Visible = true;
+                Menu.SystemName = "CheckMoneyOrder";
+
+                Menu.ChildNodes.Add(new SiteMapNode() {
+                    ResourceName = "Plugins.Payment.CheckMoneyOrder.Settings",
+                    Visible = true,
+                    SystemName = "CheckMoneyOrder.Settings",
+                    IconClass = "",
+                    ControllerName = "PaymentCheckMoneyOrder",
+                    ActionName = "Configure",
+                });
+                Menu.ChildNodes.Add(new SiteMapNode() {
+                    ResourceName = "Plugins.Payment.CheckMoneyOrder.Support",
+                    Visible = true,
+                    SystemName = "CheckMoneyOrder.Support",
+                    IconClass = "",
+                    Url = "https://grandnode.com/boards/forum/59f6f028ba1646279c61a5e4/community-plugins-themes"
+                });
+
+                if (pluginNode != null)
+                    pluginNode.ChildNodes.Add(Menu);
+                else
+                    rootNode.ChildNodes.Add(Menu);
+            }
         }
 
         public async Task<IList<string>> ValidatePaymentForm(IFormCollection form)

@@ -1,4 +1,5 @@
 ﻿using Grand.Core;
+using Grand.Framework.Components;
 using Grand.Plugin.Payments.CheckMoneyOrder.Models;
 using Grand.Services.Configuration;
 using Grand.Services.Localization;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Grand.Plugin.Payments.CheckMoneyOrder.Components
 {
-    public class PaymentCheckMoneyOrderViewComponent : ViewComponent
+    public class PaymentCheckMoneyOrderViewComponent : BaseViewComponent
     {
         private readonly IWorkContext _workContext;
         private readonly IStoreContext _storeContext;

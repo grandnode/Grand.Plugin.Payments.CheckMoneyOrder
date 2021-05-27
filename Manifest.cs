@@ -7,5 +7,5 @@ using Grand.Core.Plugins;
     SystemName = "Payments.CheckMoneyOrder",
     SupportedVersion = GrandVersion.SupportedPluginVersion,
     Author = "grandnode team",
-    Version = "1.19"
+    Version = GrandVersion.SupportedPluginVersion + ".001"
 )]
